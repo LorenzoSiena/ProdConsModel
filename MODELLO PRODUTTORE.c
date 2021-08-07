@@ -54,12 +54,15 @@ printf("Memoria Agganciata correttamente all'indirizzo %X\n",p);
  
  while (1)
  {
-    //routine produttore +semafori
+       
+    SEM_WAIT(writeID);
+    
+    //routine produttore
+    
+    SEM_SIGNAL(readID);
+  
  }
- 
- 
- 
- 
+
 //sgancio memoria
 if (shmdt(shmP)==-1){
    fprintf(stderr,"Errore sgancio memoria");
