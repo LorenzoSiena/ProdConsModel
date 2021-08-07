@@ -54,9 +54,15 @@
  printf("Memoria Agganciata correttamente all'indirizzo %X\n",p);
  
  
- while (1) 
+ while (1)
  {
-    //routine consumatore+semafori
+       
+    SEM_WAIT(readID);
+    
+    //routine consumatore
+    
+    SEM_SIGNAL(writeID);
+ 
  }
  
  //sgancio memoria
