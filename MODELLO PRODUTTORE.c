@@ -16,7 +16,7 @@ int vettore[N]; //var globale
 int main(void){
 
 int writeID,readID;
-
+int run=1;
 //Variabili Shared Memory
 int shmID;
 int *p;
@@ -52,7 +52,7 @@ printf("Memoria Agganciata correttamente all'indirizzo %p\n",p);
 printf("Memoria Agganciata correttamente all'indirizzo %X\n",p);
  
  
- while (1)
+ while (run)
  {
        
     SEM_WAIT(writeID);
